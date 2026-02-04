@@ -43,16 +43,8 @@
         }
 
         function unlockGate() {
-            const btn = document.getElementById('gate-continue');
-            if (btn) btn.classList.add('unlocked');
-            const countdown = document.getElementById('countdown');
-            if (countdown) countdown.style.display = 'none';
-            const gateContent = document.getElementById('gate-content');
-            const h2 = gateContent.querySelector('h2');
-            const p = gateContent.querySelector('p');
-            if (h2) h2.textContent = "It's time.";
-            if (p) p.textContent = "Are you ready?";
             stopCountdown();
+            goToChapter(1);
         }
 
         function startCountdown() {
@@ -88,14 +80,14 @@
             }
         }
 
-        // Secret bypass: press "s" three times to unlock
+        // Secret bypass: press "s" five times to unlock
         let bypassKeys = [];
         document.addEventListener('keydown', (e) => {
             if (e.key.toLowerCase() === 's') {
                 bypassKeys.push(Date.now());
-                // Keep only presses within last 2 seconds
-                bypassKeys = bypassKeys.filter(t => Date.now() - t < 2000);
-                if (bypassKeys.length >= 3) {
+                // Keep only presses within last 3 seconds
+                bypassKeys = bypassKeys.filter(t => Date.now() - t < 3000);
+                if (bypassKeys.length >= 5) {
                     bypassKeys = [];
                     unlockGate();
                 }
