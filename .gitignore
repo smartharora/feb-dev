@@ -1,0 +1,27 @@
+# Large media files (optional - use Git LFS if you want to track these)
+assets/music/*.mp3
+assets/music/*.wav
+assets/music/*.ogg
+
+# Large photos (optional - you can remove these lines if photos are small)
+# assets/photos/**/*.jpg
+# assets/photos/**/*.png
+# assets/photos/**/*.jpeg
+
+# Backup files
+*.backup
+*-old.html
+index.html.backup
+
+# macOS
+.DS_Store
+
+# Node modules (if you add any build tools later)
+node_modules/
+
+# Vercel
+.vercel
+
+# Environment variables (if you add any)
+.env
+.env.local
