@@ -1,7 +1,7 @@
 # Large media files (optional - use Git LFS if you want to track these)
-assets/music/*.mp3
-assets/music/*.wav
-assets/music/*.ogg
+# assets/music/*.mp3
+# assets/music/*.wav
+# assets/music/*.ogg
 
 # Large photos (optional - you can remove these lines if photos are small)
 # assets/photos/**/*.jpg
